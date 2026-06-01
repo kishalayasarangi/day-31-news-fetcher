@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News Fetcher</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="app-title">News Fetcher</h1>
+    <p class="subtitle">Live headlines from around the world</p>
+
+    <!-- SEARCH -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search news..."/>
+      <button onclick="searchNews()">🔍 Search</button>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="category-tabs">
+      <button class="cat-btn active" onclick="fetchNews('general', this)">🌐 General</button>
+      <button class="cat-btn" onclick="fetchNews('technology', this)">💻 Tech</button>
+      <button class="cat-btn" onclick="fetchNews('science', this)">🔬 Science</button>
+      <button class="cat-btn" onclick="fetchNews('sports', this)">⚽ Sports</button>
+      <button class="cat-btn" onclick="fetchNews('business', this)">💼 Business</button>
+      <button class="cat-btn" onclick="fetchNews('health', this)">❤️ Health</button>
+    </div>
+
+    <!-- STATS -->
+    <div class="news-stats" id="newsStats"></div>
+
+    <!-- NEWS GRID -->
+    <div class="news-grid" id="newsGrid">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Fetching latest headlines...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Day 31 of 120 · Kishalaya Sarangi · NIT Rourkela</footer>
+  <script src="script.js"></script>
+</body>
+</html>
